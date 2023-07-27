@@ -7,61 +7,12 @@
 </head>
 <body>
     
-    <button onclick="
-         randome()
-         cmpick = (randome())
-       
+    <button onclick="randome();  argument(`rock`)" >rock</button>
 
-         if(cmpick == `rock`){
-             alert(`you picked rock the computer picked ${cmpick} tie`)
-         }else if(cmpick == `scissors`){
-             alert(`you picked rock the computer picked ${cmpick} you win`)
-             
-           
-
-         }else if(cmpick = `paper`){
-             alert(`you picked rock the computer picked ${cmpick} you loose`)
-         };
-   
-   " >rock</button>
-
-    <button onclick="
-
-       randome()
-
-            if(cmpick == `rock`){
-                alert(`you picked scissors the computer picked ${cmpick} you loose`)
-
-            }else if(cmpick == `scissors`){
-                alert(`you picked scissors the computer picked ${cmpick} tie`)
-
-            }else if(cmpick = `paper`){
-                alert(`you picked scissors the computer picked ${cmpick} you win`)
-            
-           
-        };" 
-        >scissors</button>
+        <button onclick="randome(); argument(`scissors`)   " >scissors</button>
 
 
-        <button onclick="
-        
-        randome()
-
-            if(cmpick == `rock`){
-            alert(`you picked paper the computer picked ${cmpick} you win`)
-                
-                
-            }else if(cmpick == `paper`){
-                alert(`you picked paper the computer picked ${cmpick} tie`)
-
-            }else if(cmpick = `scissors`){
-            alert(`you picked paper the computer picked ${cmpick} you loose`)
-            };
-
-       
-   
-   
-   " >paper</button>
+        <button onclick="randome(); argument(`paper`) " >paper</button>
 
 
 <script>
@@ -112,6 +63,53 @@
             return cmpick;
     }
 
+    function argument(playermove){
+       
+         cmpick = (randome())
+
+         if( playermove === `rock` ){
+
+            if(cmpick == `rock`){
+                alert(`you picked rock the computer picked ${cmpick} tie`)
+
+                }else if(cmpick == `scissors`){
+                alert(`you picked rock the computer picked ${cmpick} you win`)
+                    
+                
+                }else if(cmpick == `paper`){
+                    alert(`you picked rock the computer picked ${cmpick} you loose`)
+                }
+            
+            }else if(playermove === `scissors`){
+              if(cmpick == `scissors`){
+                 alert(`you picked scissors the computer picked ${cmpick} tie`)
+
+                }else if(cmpick === `rock`){
+                 alert(`you picked scissors the computer picked ${cmpick} you loose`)
+             
+
+                }else if(cmpick === `paper`){
+                alert(`you picked scissors the computer picked ${cmpick} you win`)
+                }
+            }else if(playermove === `paper`){
+
+              if(cmpick == `scissors`){
+                 alert(`you picked paper the computer picked ${cmpick} you loose`)
+
+                }else if(cmpick == `rock`){
+                 alert(`you picked paper the computer picked ${cmpick} you win`)
+             
+
+                }else if(cmpick == `paper`){
+                alert(`you picked paper the computer picked ${cmpick} tie`)
+            
+         }
+
+
+        
+   
+    }
+}
 
 
 
