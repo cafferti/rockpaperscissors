@@ -8,19 +8,9 @@
 <body>
     
     <button onclick="
-
-          const rdom = Math.random();
-
-          if (rdom >= 0 && rdom < 1/3){
-            cmpick = `rock`
-    
-         }else if(rdom >= 1/3 && rdom < 2/3){ 
-            cmpick = `paper`
-
-         }else if (rdom >= 2/3 && rdom < 1){
-            cmpick = `scissors`
-         };
-         console.log(cmpick)
+         randome()
+         cmpick = (randome())
+       
 
          if(cmpick == `rock`){
              alert(`you picked rock the computer picked ${cmpick} tie`)
@@ -37,27 +27,16 @@
 
     <button onclick="
 
-    const rdom = Math.random();
+       randome()
 
-         if (rdom >= 0 && rdom < 1/3){
-           cmpick = `rock`
-         
-        }else if(rdom >= 1/3 && rdom < 2/3){ 
-           cmpick = `paper`
+            if(cmpick == `rock`){
+                alert(`you picked scissors the computer picked ${cmpick} you loose`)
 
-        }else if (rdom >= 2/3 && rdom < 1){
-           cmpick = `scissors`
-        };
-        console.log(cmpick)
+            }else if(cmpick == `scissors`){
+                alert(`you picked scissors the computer picked ${cmpick} tie`)
 
-        if(cmpick == `rock`){
-            alert(`you picked scissors the computer picked ${cmpick} you loose`)
-
-        }else if(cmpick == `scissors`){
-            alert(`you picked scissors the computer picked ${cmpick} tie`)
-
-        }else if(cmpick = `paper`){
-            alert(`you picked scissors the computer picked ${cmpick} you win`)
+            }else if(cmpick = `paper`){
+                alert(`you picked scissors the computer picked ${cmpick} you win`)
             
            
         };" 
@@ -66,33 +45,18 @@
 
         <button onclick="
         
-        const rdom = Math.random();
-        
+        randome()
 
-        if (rdom >= 0 && rdom < 1/3){
-          cmpick = `rock`
-    
-       }else if(rdom >= 1/3 && rdom < 2/3){ 
-          cmpick = `paper`
+            if(cmpick == `rock`){
+            alert(`you picked paper the computer picked ${cmpick} you win`)
+                
+                
+            }else if(cmpick == `paper`){
+                alert(`you picked paper the computer picked ${cmpick} tie`)
 
-       }else if (rdom >= 2/3 && rdom < 1){      
-          cmpick = `scissors`
-       };
-       console.log(cmpick)
-
-       if(cmpick == `rock`){
-       alert(`you picked paper the computer picked ${cmpick} you win`)
-           
-          
-           
-           
-
-       }else if(cmpick == `paper`){
-           alert(`you picked paper the computer picked ${cmpick} tie`)
-
-       }else if(cmpick = `scissors`){
-       alert(`you picked paper the computer picked ${cmpick} you loose`)
-       };
+            }else if(cmpick = `scissors`){
+            alert(`you picked paper the computer picked ${cmpick} you loose`)
+            };
 
        
    
@@ -102,9 +66,6 @@
 
 <script>
    
-   let nowin = 0
-   console.log(`you won ${nowin} times`)
-
     function randomR() { 
 
         //  let rdom = Math.random();
@@ -128,6 +89,27 @@
         // }else if(cmpick = `paper`){
         //     alert(`you picked rock the computer picked ${cmpick} you loose`)
         // };
+    }
+   
+
+    function randome(){
+
+            const rdom = Math.random();
+             
+            let cmpick = ``
+            
+
+            if (rdom >= 0 && rdom < 1/3){
+            cmpick = `rock`
+
+            }else if(rdom >= 1/3 && rdom < 2/3){ 
+            cmpick = `paper`
+
+            }else if (rdom >= 2/3 && rdom < 1){
+            cmpick = `scissors`
+            };
+
+            return cmpick;
     }
 
 
