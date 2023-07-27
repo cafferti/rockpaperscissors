@@ -9,7 +9,7 @@
     
     <button onclick="
 
-          let rdom = Math.random();
+          const rdom = Math.random();
 
           if (rdom >= 0 && rdom < 1/3){
             cmpick = `rock`
@@ -26,6 +26,8 @@
              alert(`you picked rock the computer picked ${cmpick} tie`)
          }else if(cmpick == `scissors`){
              alert(`you picked rock the computer picked ${cmpick} you win`)
+             
+           
 
          }else if(cmpick = `paper`){
              alert(`you picked rock the computer picked ${cmpick} you loose`)
@@ -35,7 +37,7 @@
 
     <button onclick="
 
-    let rdom = Math.random();
+    const rdom = Math.random();
 
          if (rdom >= 0 && rdom < 1/3){
            cmpick = `rock`
@@ -56,13 +58,16 @@
 
         }else if(cmpick = `paper`){
             alert(`you picked scissors the computer picked ${cmpick} you win`)
+            
+           
         };" 
         >scissors</button>
 
 
         <button onclick="
-        let nowin = 0
-        let rdom = Math.random();
+        
+        const rdom = Math.random();
+        
 
         if (rdom >= 0 && rdom < 1/3){
           cmpick = `rock`
@@ -76,8 +81,10 @@
        console.log(cmpick)
 
        if(cmpick == `rock`){
-           alert(`you picked paper the computer picked ${cmpick} you win`)
-           nowin = nowin + 1
+       alert(`you picked paper the computer picked ${cmpick} you win`)
+           
+          
+           
            
 
        }else if(cmpick == `paper`){
@@ -95,7 +102,8 @@
 
 <script>
    
-    
+   let nowin = 0
+   console.log(`you won ${nowin} times`)
 
     function randomR() { 
 
