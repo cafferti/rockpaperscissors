@@ -46,15 +46,14 @@
      
    
 
-    let score = {
-            wins: 0,
-            losses: 0,
-            ties : 0,
-        }; 
+    const score = 
+        JSON.parse(localStorage.getItem(`score`));
+        
+       
 
         let result = ``;
 
-    function argument(playermove){
+       function argument(playermove){
 
        function randome(){
 
@@ -134,6 +133,8 @@ win.${score.wins} lost ${score.losses}  tie.${score.ties}`)
     
 }
 
+localStorage.setItem(`score`, JSON.stringify(score));
+
 function reset(){
     score.wins = 0
     score.losses = 0
@@ -156,7 +157,7 @@ const product2 = {
     }
     
 }
-
+  
 console.log(product2)
 console.log(product2.name)
 // console.log(product2[`name`])
@@ -165,6 +166,17 @@ console.log(product2.rating.stars)
 console.log(product2.rating.count)
 product2.fun();
  
+// built in object json
+// converting from java script syntax to  json syntax 
+console.log(JSON.stringify(product2))
+
+// converting from json syntax to java script syntaX
+JSON.parse(JSON.stringify(product2));
+console.log(JSON.parse(JSON.stringify(product2)))
+
+// for more understanding
+const jsonstringify = JSON.stringify(product2);
+console.log(JSON.parse(jsonstringify));
 
 </script>
 
