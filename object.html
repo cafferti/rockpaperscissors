@@ -7,8 +7,13 @@
 </head>
 <body>
 
-    <button>hello</button>
    
+    <button>hello</button>
+    <button class="jsbtn" >secondbtn</button>
+        
+</body>
+   
+ 
 
     <script>
 
@@ -50,14 +55,19 @@
 
    console.log(document.body)
    console.log(typeof document.body)
+    
 
-   document.body.innerHTML = `<button>accept</button>`;
+  
 //    method
    document.querySelector(`button`)
    console.log(document.querySelector(`button`))
-   console.log(document.querySelector(`body`))
-   
+   document.querySelector(`button`).innerHTML =`cnanged button`;
+   document.querySelector(`.jsbtn`).innerHTML = `we got you`;
 
+//    saving in const
+ const buttonElement = document.querySelector(`.jsbtn`)
+   
+console.log(buttonElement)
     </script>
 </body>
 </html>
